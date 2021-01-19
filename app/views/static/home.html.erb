@@ -1,0 +1,9 @@
+<h1>Welcome to The Random Stream Finder<h1>
+<h2><%= link_to "Log In With Twitch", '/auth/twitch' %></h2>
+
+<iframe
+    src= <%= "https://player.twitch.tv/?channel=#{@channel}&parent=localhost" %>
+    height="600"
+    width="800"
+    allowfullscreen="<allowfullscreen>">
+</iframe>
