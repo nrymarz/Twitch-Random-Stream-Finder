@@ -11,6 +11,7 @@ class StaticController < ApplicationController
             streams = $client.get_streams(language:'en', first:100, after: page)
         end
         int = rand(100)
-        streams.data[int].user_name
+        channel = streams.data[int]
+        channel ? channel.user_name : get_random_channel
     end
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users do 
-    resources :recommendations, only: [:show,:index]
+    resources :recommendations, only: [:show,:index,:new]
   end
   resources :recommendations 
   resources :channels, only: [:show]
