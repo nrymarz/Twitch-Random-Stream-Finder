@@ -1,6 +1,11 @@
 class SessionsController < ApplicationController
+    before_action :redirect_if_already_logged_in, except: [:destroy,:create,:twitch_login]
     def new 
         @user = User.new
+    end
+
+    def new_twitch
+        redirect_to '/auth/twitch' if !logged_in?
     end
 
     def create
@@ -9,7 +14,7 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             redirect_to root_path
         else
-            redirect_to login_path notice: "Failed to login."
+            redirect_to login_path, notice: "Failed to login."
         end
     end
 

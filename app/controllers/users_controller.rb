@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :redirect_if_already_logged_in, only:[:new]
     def new
         @user = User.new
     end
@@ -8,6 +9,7 @@ class UsersController < ApplicationController
     end
 
     def show
+        redirect_if_not_current_user
         @user = User.find(params[:id])
     end
 
@@ -29,4 +31,5 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:name,:password)
     end
+
 end

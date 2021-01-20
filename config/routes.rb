@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: 'static#home'
   match '/auth/twitch/callback', to: 'sessions#twitch_login', via: [:get, :post] 
   get 'login', to: 'sessions#new'
+  get 'login_twitch', to: 'sessions#new_twitch'
   post 'login', to: 'sessions#create'
   post 'logout', to: 'sessions#destroy'
 end
