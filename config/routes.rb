@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :channels, only: [:show]
   root to: 'static#home'
   match '/auth/twitch/callback', to: 'sessions#twitch_login', via: [:get, :post] 
-  get 'login', to: 'sessions#create'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
   post 'logout', to: 'sessions#destroy'
 end
