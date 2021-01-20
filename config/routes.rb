@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :recommendations 
   resources :channels, only: [:show]
   root to: 'static#home'
-  match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post] 
+  match '/auth/twitch/callback', to: 'sessions#twitch_login', via: [:get, :post] 
+  get 'login', to: 'sessions#create'
+  post 'logout', to: 'sessions#destroy'
 end
