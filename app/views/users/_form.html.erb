@@ -1,7 +1,27 @@
+<% if @user.errors.any? %>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+    </ul>
+<% end %>
 <%= form_for @user do |f| %>
+    <div class= "label">
     <%= f.label :name %>
+    </div>
+    <div class="input">
     <%= f.text_field :name %>
+    </div>
+
+    <br>
+
+    <div class= "label">
     <%= f.label :password %>
+    </div>
+    <div class="input">
     <%= f.text_field :password %>
+    </div>
+
+    <br>
     <%= f.submit %>
 <% end %>

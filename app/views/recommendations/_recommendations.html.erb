@@ -1,0 +1,5 @@
+<ul>
+<% recommendations.each do |rec| %>
+    <li><%= link_to "Recommendation for #{rec.channel.name}", recommendation_path(rec) %></li>
+<% end %>
+</ul>

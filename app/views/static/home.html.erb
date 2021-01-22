@@ -1,14 +1,10 @@
-<h1>Welcome to The Random Stream Finder<h1>
-<h2><%= link_to "Log In", login_path %></h2>
-<h2><%= link_to "Log In With Twitch", login_twitch_path %></h2>
-<% if logged_in? %>
-    <p><%= "You are logged in as #{current_user.name}" %></p>
-    <p><%= button_to "Log Out", logout_path, method: 'POST' %></p>
-<% end %>
 <iframe
     src= <%= "https://player.twitch.tv/?channel=#{@channel}&parent=localhost" %>
-    height="600"
-    width="800"
+    height = "600" 
+    width="100%"
     allowfullscreen="<allowfullscreen>">
 </iframe>
-<h2><%= link_to "New Stream", root_path %></h2>
+<br>
+<%= button_to "New Stream", root_path, method: "get" %>
+<%= button_to "Recommend this streamer", new_user_recommendation_path(current_user), method: 'get', params: {channel_name: @channel} %>
+

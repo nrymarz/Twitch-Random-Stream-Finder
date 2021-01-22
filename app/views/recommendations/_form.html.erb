@@ -1,0 +1,31 @@
+<% if @recommendation.errors.any? %>
+    <ul>
+    <% @recommendation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+    </ul>
+<% end %>
+
+<%= form_for [@user, @recommendation] do |f| %>
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <div class='label'>
+    <%= f.label :channel_name %>
+    </div>
+    <div class="input">
+    <%= f.text_field :channel_name %>
+    <div>
+
+    <br>
+
+    <div class='label'>
+    <%= f.label :content %>
+    </div>
+    <div class="input">
+    <%= f.text_area :content %>
+    </div>
+
+    <br>
+    <%= f.submit %>
+<% end %>
+
+    

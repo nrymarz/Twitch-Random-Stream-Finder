@@ -8,15 +8,13 @@ class ApplicationController < ActionController::Base
     end
 
     def redirect_if_not_logged_in
-        if logged_in?
-            redirect_to login_path, alert: "You Must Log In to See That Page"
-        else
-            yield
-        end
+        redirect_to root_path, notice: "You must be logged in to see that page." unless logged_in?
     end
 
     def redirect_if_not_current_user
-        return head(403) unless session[:user_id] == params[:id].to_i
+        redirect_if_not_logged_in
+        id = params[:user_id] || params[:id]
+        return head(403) unless session[:user_id] == id.to_i
     end
 
     def redirect_if_already_logged_in

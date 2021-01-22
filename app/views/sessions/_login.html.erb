@@ -1,7 +1,23 @@
+<h2> Create an Account: </h2>
 <%= form_for @user, url: login_path do |f| %>
+    <div class="label">
     <%= f.label :name %>
+    </div>
+    <div class="input">
     <%= f.text_field :name %>
+    </div>
+
+    <br>
+
+    <div class="label">
     <%= f.label :password %>
+    </div>
+    <div class="input">
     <%= f.text_field :password %>
+    </div>
+
+    <br>
     <%= f.submit "Log In" %>
 <% end %>
+
+<h2>Or <%= link_to "Log In With Twitch", login_twitch_path %></h2>

@@ -1,1 +1,2 @@
-<h2> <%= @user.name %> <h2>
+<h2> <%= @user.name %> </h2>
+<%= render partial: '/recommendations/recommendations', locals: {recommendations: @user.recommendations} %>

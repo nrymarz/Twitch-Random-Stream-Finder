@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_192927) do
+ActiveRecord::Schema.define(version: 2021_01_21_035426) do
 
   create_table "channels", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.string "profile_image_url"
   end
 
   create_table "recommendations", force: :cascade do |t|

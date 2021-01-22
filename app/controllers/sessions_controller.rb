@@ -14,12 +14,16 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             redirect_to root_path
         else
-            redirect_to login_path, notice: "Failed to login."
+            redirect_to login_path, notice: "No users found with the provided name and password"
         end
     end
 
     def twitch_login
         user = User.find_or_create_by(twitch_login_params)
+        if user.password_digest.nil?
+            user.password = rand(36**16).to_s(36) 
+            user.save
+        end
         session[:user_id] = user.id 
         redirect_to root_path
     end
