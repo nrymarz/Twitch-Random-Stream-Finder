@@ -1,10 +1,17 @@
-<iframe
-    src= <%= "https://player.twitch.tv/?channel=#{@channel}&parent=localhost" %>
-    height = "600" 
-    width="100%"
-    allowfullscreen="<allowfullscreen>">
-</iframe>
-<br>
-<%= button_to "New Stream", root_path, method: "get" %>
-<%= button_to "Recommend this streamer", new_user_recommendation_path(current_user), method: 'get', params: {channel_name: @channel} %>
+<div class="iframe-embed-wrapper iframe-embed-responsive-16by9">
+    <div>
+        <iframe class="iframe-embed"
+            src= <%= "https://player.twitch.tv/?channel=#{@channel}&parent=localhost" %>
+            allowfullscreen="<allowfullscreen>">
+        </iframe>
+    </div>
+
+    <div>
+        <iframe class="chat-embed" 
+        src= <%="https://www.twitch.tv/embed/#{@channel}/chat?darkpopout&parent=localhost" %> >
+        </iframe>
+    </div>
+<div>
+
+
 
