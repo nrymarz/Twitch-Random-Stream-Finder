@@ -1,8 +1,8 @@
 class RecommendationsController < ApplicationController
-    def index #add profile images
+    def index
         if params[:user_id]
-            user = User.find_by(id: params[:user_id])
-            @recommendations = user.recommendations
+            @user = User.find_by(id: params[:user_id])
+            @recommendations = @user.recommendations
         else
             @recommendations = Recommendation.all
         end
@@ -10,7 +10,8 @@ class RecommendationsController < ApplicationController
 
     def show
         if params[:user_id]
-            @recommendation = User.find_by(id: params[:user_id]).try(:recommendations).find_by(id: params[:id])
+            @user = User.find_by(id: params[:user_id])
+            @recommendation = @user.try(:recommendations).find_by(id: params[:id])
         else
             @recommendation = Recommendation.find_by(id: params[:id])
         end
@@ -49,6 +50,12 @@ class RecommendationsController < ApplicationController
             @user = current_user
             render 'edit'
         end
+    end
+
+    def destroy
+        redirect_if_not_current_user
+        Recommendation.destroy(params[:id])
+        redirect_to recommendations_path
     end
 
     private 

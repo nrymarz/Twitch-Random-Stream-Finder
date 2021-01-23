@@ -1,6 +1,11 @@
-<ul>
-<% recommendations.each do |rec| %>
-    <%=link_to image_tag(rec.channel.profile_image_url,size: "100x100"), channel_path(rec.channel) %>
-    <li><%= link_to "Recommendation for #{rec.channel.name}", recommendation_path(rec) %></li>
-<% end %>
-</ul>
+<div class = "d-flex flex-row flex-wrap">
+    <% recommendations.each do |rec| %>
+        <div class= "p-2 w-25">
+            <%=link_to image_tag(rec.channel.profile_image_url,size: "100x100"), channel_path(rec.channel), class:"d-flex justify-content-center" %>
+            <div class= "d-block text-center text-truncate">
+                <%= link_to "#{rec.channel.name}'s Recommendation", user_recommendation_path(rec.user,rec),class: "align-top" %>
+                <div class= "description"><%= rec.content %></div>
+            </div>
+        </div>
+    <% end %>
+</div>

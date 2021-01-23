@@ -22,7 +22,7 @@
           <%= link_to "Find a Stream", root_path, class:"nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Recommended Streamers", recommendations_path, class: "nav-link" %>
+          <%= link_to "Browse Recommendations", recommendations_path, class: "nav-link" %>
         </li>
         <% if logged_in? %>
           <li class='nav-item'>
@@ -50,7 +50,7 @@
   </div>
 
   <% flash.each do |type, msg| %>
-    <div>
+    <div class = "alert alert-primary" role = "alert">
       <%= msg %>
     </div>
   <% end %>

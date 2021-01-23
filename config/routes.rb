@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :users do 
-    resources :recommendations, only: [:show,:index,:new,:edit,:create,:update]
+    resources :recommendations, only: [:show,:index,:new,:edit,:create,:update,:destroy]
   end
-  resources :recommendations, only: [:show,:index,:destroy]
+  resources :recommendations, only: [:show,:index,]
   resources :channels, only: [:show]
   root to: 'static#home'
   match '/auth/twitch/callback', to: 'sessions#twitch_login', via: [:get, :post] 
