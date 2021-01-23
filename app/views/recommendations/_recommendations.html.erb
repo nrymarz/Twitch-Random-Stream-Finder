@@ -1,5 +1,6 @@
 <ul>
 <% recommendations.each do |rec| %>
+    <%=link_to image_tag(rec.channel.profile_image_url,size: "100x100"), channel_path(rec.channel) %>
     <li><%= link_to "Recommendation for #{rec.channel.name}", recommendation_path(rec) %></li>
 <% end %>
 </ul>
