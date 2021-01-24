@@ -2,9 +2,9 @@ class RecommendationsController < ApplicationController
     def index
         if params[:user_id]
             @user = User.find_by(id: params[:user_id])
-            @recommendations = @user.recommendations
+            @recommendations = @user.recommendations.reverse_order
         else
-            @recommendations = Recommendation.all
+            @recommendations = Recommendation.all.reverse_order
         end
     end
 

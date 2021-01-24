@@ -10,7 +10,7 @@ class Recommendation < ActiveRecord::Base
     end
 
     def channel_name 
-        self.channel.name if self.channel
+        self.channel.try(:name)
     end
 
         
