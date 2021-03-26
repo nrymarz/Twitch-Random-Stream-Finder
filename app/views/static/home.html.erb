@@ -1,17 +1,1 @@
-<div class="iframe-embed-wrapper iframe-embed-responsive-16by9">
-    <div>
-        <iframe class="iframe-embed"
-            src= <%= "https://player.twitch.tv/?channel=#{@channel}&parent=localhost" %>
-            allowfullscreen="<allowfullscreen>">
-        </iframe>
-    </div>
-
-    <div>
-        <iframe class="chat-embed" 
-        src= <%="https://www.twitch.tv/embed/#{@channel}/chat?darkpopout&parent=localhost" %> >
-        </iframe>
-    </div>
-<div>
-
-
-
+<%= render 'channels/channel' %>

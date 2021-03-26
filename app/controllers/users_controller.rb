@@ -4,12 +4,7 @@ class UsersController < ApplicationController
         @user = User.new
     end
 
-    def edit
-        @user = User.find(params[:id])
-    end
-
     def show
-        redirect_if_not_current_user
         @user = User.find(params[:id])
     end
 
@@ -21,9 +16,6 @@ class UsersController < ApplicationController
         else
             render 'new'
         end
-    end
-
-    def update 
     end
 
     private

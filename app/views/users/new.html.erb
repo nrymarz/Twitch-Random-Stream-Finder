@@ -1,2 +1,12 @@
-<h2>Signup</h2>
-<%= render 'form' %>
+<% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |msg| %>
+        <div class = 'alert alert-primary'>
+            <%= msg %>
+        </div>
+    <% end %>
+<% end %>
+
+<div class = "center-in-page">
+    <h2 class: "text-center">Create An Account</h2>
+    <%= render 'form' %>
+</div>

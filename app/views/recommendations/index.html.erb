@@ -1,1 +1,4 @@
+<% if @user %>
+    <h2> <%= current_user == @user ? "Your" : "#{@user.name}'s" %> Recommendations </h2>
+<% end %>
 <%= render partial: 'recommendations', locals: {recommendations: @recommendations} %>

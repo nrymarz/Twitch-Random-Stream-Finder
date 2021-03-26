@@ -1,2 +1,12 @@
-<h2><%=@recommendation.channel.name%></h2>
-<p><%=@recommendation.content%></p>
+<%=link_to image_tag(@recommendation.channel.profile_image_url), channel_path(@recommendation.channel), class:"d-flex justify-content-center" %>
+<h2 class="text-primary text-center"><%=@recommendation.channel.name%></h2>
+<div class = "d-block text-center">
+    <p class=" text-light"><%=@recommendation.content%></p>
+    <p>Recommended by <%=link_to @recommendation.user.name, user_path(@recommendation.user) %></p>
+</div>
+
+<% if @user && @user == current_user %>
+    <br>
+    <%= link_to "Edit Recommendation", edit_user_recommendation_path(@user,@recommendation) %>
+    <%= button_to "Delete Recommendation", user_recommendation_path(@user,@recommendation), method: 'delete' %>
+<% end %>
