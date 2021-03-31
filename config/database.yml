@@ -15,8 +15,8 @@ development:
 
 test:
   <<: *default
-  database: vgbacklogtracker_test
+  database: twitchrandomstreamfinder_test
 
 production:
   <<: *default
-  database: vgbacklogtracker_production
+  database: twitchrandomstreamfinder_production
