@@ -63,6 +63,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     bcrypt (3.1.16)
+    bcrypt (3.1.16-java)
     bindex (0.8.1)
     bootsnap (1.5.1)
       msgpack (~> 1.0)
@@ -102,6 +103,7 @@ GEM
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
     json (2.5.1)
+    json (2.5.1-java)
     jwt (2.2.2)
     listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -150,6 +152,9 @@ GEM
       omniauth (>= 1.9, < 3)
     omniauth-twitch (1.1.0)
       omniauth-oauth2 (~> 1.6)
+    pg (1.2.3)
+    pg (1.2.3-x64-mingw32)
+    pg (1.2.3-x86-mingw32)
     public_suffix (4.0.6)
     puma (5.1.1)
       nio4r (~> 2.0)
@@ -218,7 +223,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.0.1)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -272,12 +276,12 @@ DEPENDENCIES
   listen (~> 3.3)
   omniauth
   omniauth-twitch
+  pg
   puma (~> 5.0)
   rails (~> 6.1.0)
   sass-rails (>= 6)
   selenium-webdriver
   spring
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   twitch-api
   tzinfo-data
@@ -286,7 +290,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 2.6.1p33
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.1.4
