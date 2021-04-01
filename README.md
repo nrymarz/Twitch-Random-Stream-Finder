@@ -8,3 +8,4 @@ This app was made with Ruby on Rails. No scaffolding was used but I did use gene
 
 ## Check it out
 Watch a demonstration of this app here: https://www.youtube.com/watch?v=EoeyYE8D6IU
+Visit the Live Site on Heroku: https://randomstreamfinder.herokuapp.com/
