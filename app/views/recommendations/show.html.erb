@@ -1,4 +1,6 @@
-<%=link_to image_tag(@recommendation.channel.profile_image_url), channel_path(@recommendation.channel), class:"d-flex justify-content-center" %>
+<div class="d-flex justify-content-center">
+    <%=link_to image_tag(@recommendation.channel.profile_image_url), channel_path(@recommendation.channel) %>
+</div>
 <h2 class="text-primary text-center"><%=@recommendation.channel.name%></h2>
 <div class = "d-block text-center">
     <p class=" text-light"><%=@recommendation.content%></p>
