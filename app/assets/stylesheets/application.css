@@ -9,15 +9,15 @@ body {
   background-color: rgb(34, 30, 37);
   }
 .iframe-embed {
-  height: calc(100vh - 3rem);
-  width: 76vw;
+  height: calc(100vh - 3.35rem);
+  width: 77vw;
 }
 .iframe-embed-wrapper {
   position: relative;
   display: flex;
 }
 .chat-embed{
-  height: calc(100vh - 3rem);
+  height: calc(100vh - 3.35rem);
   width: 23vw;
 }
 
