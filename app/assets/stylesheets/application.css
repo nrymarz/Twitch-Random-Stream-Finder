@@ -30,4 +30,13 @@ transform: translate(-50%, -50%)
 .description {
 color: grey; 
 }
+.recommendation-card{
+  border:solid purple;
+  
+}
+.recommendation-text{
+  text-align: center;
+  overflow:hidden;
+  height:200px
+}
 
