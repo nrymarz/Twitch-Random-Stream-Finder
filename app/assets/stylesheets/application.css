@@ -9,32 +9,16 @@ body {
   background-color: rgb(34, 30, 37);
   }
 .iframe-embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 77%;
-  width: 77%;
-  border: 0;
+  height: calc(100vh - 3rem);
+  width: 76vw;
 }
 .iframe-embed-wrapper {
   position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-}
-.iframe-embed-responsive-16by9 {
-  padding-bottom: 56.25%;
+  display: flex;
 }
 .chat-embed{
-  position: absolute;
-  top: 0;
-  left: 77%;
-  bottom: 0;
-  height: 77%;
-  width: 23%;
-  border: 0;
+  height: calc(100vh - 3rem);
+  width: 23vw;
 }
 
 .center-in-page{
