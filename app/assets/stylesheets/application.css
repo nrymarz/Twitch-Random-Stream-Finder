@@ -28,7 +28,7 @@ left: 50%;
 transform: translate(-50%, -50%)
 }
 .description {
-color: grey; 
+color: rgb(116, 116, 116); 
 }
 .recommendation-card{
   border:solid purple;

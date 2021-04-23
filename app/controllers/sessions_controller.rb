@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     end
 
     def new_twitch
-        redirect_to '/auth/twitch' if !logged_in?
+        redirect_to '/auth/twitch'
     end
 
     def create
