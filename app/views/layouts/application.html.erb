@@ -18,9 +18,15 @@
         <li class= "nav-item">
           <h5 class= "navbar-text text-primary mx-3">Random Stream Finder</h5>
         </li>
-        <li class="nav-item">
-          <%= link_to "Find a Stream", root_path, class:"nav-link" %>
-        </li>
+        <% if current_page?(root_path) %>
+          <li class="nav-item">
+            <a href="" class="nav-link" onClick="newStream()"> New Stream </a>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class:"nav-link" %>
+          </li>
+        <% end %>
         <li class="nav-item">
           <%= link_to "Browse Recommendations", recommendations_path, class: "nav-link" %>
         </li>
