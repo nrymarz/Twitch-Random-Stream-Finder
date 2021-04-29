@@ -11,7 +11,7 @@
       function newChannel(){
         const streamPlayer = document.querySelector(".iframe-embed")
         const chat = document.querySelector(".chat-embed")
-        fetch("https://randoomstreamfinder.herokuapp.com/new_channel")
+        fetch("https://randomstreamfinder.herokuapp.com/new_channel")
           .then(res => res.json())
           .then(json =>{
             streamPlayer.src = `https://player.twitch.tv/?channel=${json.channel}&parent=randomstreamfinder.herokuapp.com`
