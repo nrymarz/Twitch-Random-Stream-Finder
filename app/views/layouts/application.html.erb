@@ -14,8 +14,8 @@
         fetch("http://localhost:3000/new_channel")
           .then(res => res.json())
           .then(json =>{
-            streamPlayer.src = `https://player.twitch.tv/?channel=${json.channel}&parent=localhost`
-            chat.src = `https://www.twitch.tv/embed/${json.channel}/chat?darkpopout&parent=localhost`
+            streamPlayer.src = `https://player.twitch.tv/?channel=${json.channel}&parent=randomstreamfinder.herokuapp.com`
+            chat.src = `https://www.twitch.tv/embed/${json.channel}/chat?darkpopout&parent=randomstreamfinder.herokuapp.com`
           })
       }
     </script>
