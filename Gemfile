@@ -36,6 +36,7 @@ gem 'omniauth-twitch'
 
 gem 'json'
 gem 'bcrypt'
+gem 'rack-cors'
 
 
 
