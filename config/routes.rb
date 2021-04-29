@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get 'login_twitch', to: 'sessions#new_twitch'
   post 'login', to: 'sessions#create'
   match 'logout', to: 'sessions#destroy', via: [:get, :post]
+  get 'new_channel', to: 'static#new_channel'
 end

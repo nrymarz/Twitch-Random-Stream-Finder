@@ -14,4 +14,9 @@ class StaticController < ApplicationController
         channel = streams.data[int]
         channel ? channel.user_name : get_random_channel
     end
+
+    def new_channel
+        @channel=get_random_channel
+        render json: {channel: @channel}
+    end
 end
