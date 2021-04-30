@@ -1,16 +1,11 @@
-<% if @channel %>
-    <div class="iframe-embed-wrapper iframe-embed-responsive-16by9">
-        <div>
-            <iframe class="iframe-embed"
-                src= <%= "https://player.twitch.tv/?channel=#{@channel}&parent=randomstreamfinder.herokuapp.com" %>
-                allowfullscreen="<allowfullscreen>">
-            </iframe>
-        </div>
+<p style="display: none" class="channel"><%= @channel %></p>
+<div id="twitch-embed"></div>
 
-        <div>
-            <iframe class="chat-embed" 
-            src= <%="https://www.twitch.tv/embed/#{@channel}/chat?darkpopout&parent=randomstreamfinder.herokuapp.com" %> >
-            </iframe>
-        </div>
-    <div>
-<% end %>
+<script type="text/javascript">
+    new Twitch.Embed("twitch-embed", {
+        height:"97%",
+        width:"100%",
+        channel: document.querySelector(".channel").innerText,
+        parent: ["localhost", "randomstreamfinder.herokuapp.com"]
+    });
+</script>
