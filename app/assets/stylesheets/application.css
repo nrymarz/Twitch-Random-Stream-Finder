@@ -8,18 +8,13 @@ body {
   text-align: left;
   background-color: rgb(34, 30, 37);
   }
-.iframe-embed {
-  height: calc(100vh - 3.35rem);
-  width: 77vw;
-}
-.iframe-embed-wrapper {
-  position: relative;
-  display: flex;
-}
-.chat-embed{
-  height: calc(100vh - 3.35rem);
-  width: 23vw;
-}
+  iframe {
+    height: calc(100vh - 3.35rem);
+    width: 100vw;
+  }
+  .twitch-embed {
+    position: relative;
+  }
 
 .center-in-page{
 position:fixed;
