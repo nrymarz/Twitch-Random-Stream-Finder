@@ -38,53 +38,80 @@
   <body>
    
   <div class = "bg-dark">
-  <nav class="navbar-dark navbar-expand" >
-    <ul class="navbar-nav">
-      <li class= "nav-item">
-        <h5 class= "navbar-text text-primary logo mx-1">Random Stream Finder</h5>
-      </li>
-      <% if current_page?(root_path) %>
-        <li class="nav-item">
-         <a href="#" onclick="newChannel()" class="nav-link">New Stream</a>
+    <nav class="navbar-dark navbar-expand" >
+      <ul class="navbar-nav">
+        <li class= "nav-item">
+          <h5 class= "navbar-text text-primary logo mx-1">Random Stream Finder</h5>
         </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class:"nav-link" %>
-        </li>
-      <% end %>
-      <a href="javascript:void(0);" class="icon nav-icon" onclick="dropdown()">
-        <%= image_tag("hambuger_icon.png") %>
-       </a>
-    </ul>
+        <% if current_page?(root_path) %>
+          <li class="nav-item">
+           <a href="#" onclick="newChannel()" class="nav-link">New Stream</a>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class:"nav-link" %>
+          </li>
+        <% end %>
+        <a href="javascript:void(0);" class="icon nav-icon" onclick="dropdown()">
+          <%= image_tag("hambuger_icon.png") %>
+         </a>
+      </ul>
 
-    <ul class = "navbar-nav hamburger">
-      <li class="nav-item">
-        <%= link_to "Browse Recommendations", recommendations_path, class: "nav-link" %>
-      </li>
-      <% if logged_in? %>
-        <li class='nav-item'>
-          <%= link_to "Create a Recommendation",
-            new_user_recommendation_path(current_user, channel_name: @channel),
-            class: "nav-link"
-          %>
-        </li>
+      <ul class = "navbar-nav hideforphone">
         <li class="nav-item">
-          <%= link_to "View Profile Page", user_path(current_user), class: 'nav-link' %>
+          <%= link_to "Browse Recommendations", recommendations_path, class: "nav-link" %>
         </li>
+        <% if logged_in? %>
+          <li class='nav-item'>
+            <%= link_to "Create a Recommendation",
+              new_user_recommendation_path(current_user, channel_name: @channel),
+              class: "nav-link"
+            %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "View Profile Page", user_path(current_user), class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "logout", logout_path, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", login_path, class: 'nav-link' %>
+          </li>
+          <li class = "nav-item">
+            <%= link_to "Signup", new_user_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+
+      <ul class = "navbar-nav hamburger">
         <li class="nav-item">
-          <%= link_to "logout", logout_path, class: "nav-link" %>
+          <%= link_to "Browse Recommendations", recommendations_path, class: "nav-link" %>
         </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", login_path, class: 'nav-link' %>
-        </li>
-        <li class = "nav-item">
-          <%= link_to "Signup", new_user_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-  </nav>
-</div>
+        <% if logged_in? %>
+          <li class='nav-item'>
+            <%= link_to "Create a Recommendation",
+              new_user_recommendation_path(current_user, channel_name: @channel),
+              class: "nav-link"
+            %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "View Profile Page", user_path(current_user), class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "logout", logout_path, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", login_path, class: 'nav-link' %>
+          </li>
+          <li class = "nav-item">
+            <%= link_to "Signup", new_user_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
 
 <% flash.each do |type, msg| %>
   <div class = "alert alert-primary" role = "alert">
