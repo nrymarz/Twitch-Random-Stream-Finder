@@ -25,10 +25,7 @@ transform: translate(-50%, -50%)
 .description {
 color: rgb(116, 116, 116); 
 }
-.recommendation-card{
-  border:solid purple;
-  
-}
+
 .recommendation-text{
   text-align: center;
   overflow:hidden;
