@@ -35,3 +35,37 @@ color: rgb(116, 116, 116);
   height:200px
 }
 
+.logo{
+  font-size: calc(1rem +0.2vw);
+  margin-left:2%
+}
+.nav-icon{
+  display:none;
+}
+
+.navbar-dark{
+  display:flex;
+  flex-direction:row;
+}
+
+@media only screen and (max-width: 700px){
+  .navbar-dark{
+    flex-direction:column;
+  }
+  .hamburger{
+    display: none;
+  }
+
+  .nav-icon{
+    display:inline;
+    margin-left:auto;
+    margin-right:2%;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+
+  .nav-icon img{
+    height:30px;
+    width:30px;
+  }
+}
