@@ -48,6 +48,14 @@ color: rgb(116, 116, 116);
   flex-direction:row;
 }
 
+.hideforphone{
+  display:flex;
+}
+
+.hamburger{
+  display: none;
+}
+
 @media only screen and (max-width: 700px){
   .navbar-dark{
     flex-direction:column;
@@ -67,5 +75,9 @@ color: rgb(116, 116, 116);
   .nav-icon img{
     height:30px;
     width:30px;
+  }
+  
+  .hideforphone{
+    display:none;
   }
 }
