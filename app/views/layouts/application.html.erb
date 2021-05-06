@@ -39,23 +39,19 @@
   <body>
    
   <nav class="navbar navbar-expand" >
-  <div class="d-flex top-row-phone">
-    <div class= "logo navbar-brand my-auto">Random Stream Finder</div>
-    <ul class="navbar-nav">
-      <% if current_page?(root_path) %>
-        <li class="nav-item">
-        <a href="#" onclick="newChannel()" class="nav-link">New Stream</a>
-        </li>
-      <% else %>
-        <li class="nav-item">
+    <div class="d-flex top-row-phone navbar-nav">
+      <div class= "logo navbar-brand my-auto">Random Stream Finder</div>
+        <% if current_page?(root_path) %>
+          <li class="nav-item">
+            <a href="#" onclick="newChannel()" class="nav-link">New Stream</a>
+          </li>
+        <% else %>
           <%= link_to "Home", root_path, class:"nav-link" %>
-        </li>
-      <% end %>
-      <a href="javascript:void(0);" class="icon nav-icon" onclick="dropdown()">
-        <%= image_tag("hambuger_icon.png") %>
-      </a>
-    </ul>
-  </div>
+        <% end %>
+          <a href="javascript:void(0);" class="icon nav-icon" onclick="dropdown()">
+            <%= image_tag("hambuger_icon.png") %>
+          </a>
+    </div>
 
   <ul class = "navbar-nav hideforphone">
     <li class="nav-item">
