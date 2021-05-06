@@ -63,7 +63,15 @@ color: rgb(116, 116, 116);
   color:pink;
 }
 
+.top-row-phone{
+  width:auto;
+}
+
 @media only screen and (max-width: 700px){
+
+  .top-row-phone{
+    width:100%;
+  }
 
   .navbar{
     flex-direction:column;
