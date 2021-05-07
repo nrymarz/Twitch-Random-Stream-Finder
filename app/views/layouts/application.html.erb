@@ -14,7 +14,7 @@
         const streamPlayer = document.querySelector("iframe")
         const btn = document.querySelector("#new-stream-button")
         btn.style.color = "rgb(32, 32, 32)"
-        fetch("https://randomstreamfinder.herokuapp.com/new_channel")
+        fetch("http://localhost:3000/new_channel")
           .then(res => res.json())
           .then(json =>{
               streamPlayer.remove()
@@ -25,7 +25,7 @@
               btn.style.color = 'white'
           })
           .catch( ()=> btn.style.color = "white")
-        }
+      }
 
         
       function dropdown(){
