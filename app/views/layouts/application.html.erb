@@ -12,7 +12,7 @@
     <script type="text/javascript">
       function newChannel(){
         const streamPlayer = document.querySelector("iframe")
-        fetch("https://randomstreamfinder.herokuapp.com/new_channel")
+        fetch("http://localhost:3000/new_channel")
           .then(res => res.json())
           .then(json =>{
               streamPlayer.remove()
