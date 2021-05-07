@@ -43,7 +43,7 @@
       <div class= "logo navbar-brand my-auto">Random Stream Finder</div>
         <% if current_page?(root_path) %>
           <li class="nav-item">
-            <a href="#" onclick="newChannel()" class="nav-link">New Stream</a>
+            <b><a href="#" onclick="newChannel()" class="nav-link" id="new-stream-button">New Stream</a></b>
           </li>
         <% else %>
           <%= link_to "Home", root_path, class:"nav-link" %>
