@@ -75,17 +75,13 @@ color: rgb(116, 116, 116);
 #new-stream-button{
   background:#440158;
   border-radius:19px;
-  color:rgb(214, 214, 214);
+  color:white;
 }
 
 #new-stream-button:hover{
   background:rgb(153, 115, 121);
-  color:white;
 }
 
-#new-stream-button:active{
-  color:deeppink;
-}
 
 @media only screen and (max-width: 700px){
 

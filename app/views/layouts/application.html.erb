@@ -13,6 +13,7 @@
       function newChannel(){
         const streamPlayer = document.querySelector("iframe")
         const btn = document.querySelector("#new-stream-button")
+        btn.style.color = "rgb(32, 32, 32)"
         fetch("http://localhost:3000/new_channel")
           .then(res => res.json())
           .then(json =>{
@@ -21,7 +22,9 @@
                   channel: json.channel,
                   parent: ["localhost", "randomstreamfinder.herokuapp.com"]
               });
+              btn.style.color = 'white'
           })
+          .catch( ()=> btn.style.color = "white")
         }
 
         
