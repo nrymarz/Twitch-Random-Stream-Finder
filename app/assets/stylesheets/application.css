@@ -9,7 +9,7 @@ body {
   background-color: rgb(34, 30, 37);
   }
   iframe {
-    height: calc(100vh - 3.35rem);
+    height: calc(100vh - 3.85rem);
     width: 100vw;
   }
   .twitch-embed {
