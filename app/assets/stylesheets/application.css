@@ -73,13 +73,13 @@ color: rgb(116, 116, 116);
 }
 
 #new-stream-button{
-  background:#440158;
-  border-radius:19px;
+  background:#560270;
+  border-radius:5px;
   color:white;
 }
 
 #new-stream-button:hover{
-  background:rgb(153, 115, 121);
+  background:#8802b1;
 }
 
 
