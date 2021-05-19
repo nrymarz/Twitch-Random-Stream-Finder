@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_035426) do
+ActiveRecord::Schema.define(version: 2021_05_19_164653) do
 
   create_table "channels", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2021_01_21_035426) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
     t.string "profile_image_url"
+  end
+
+  create_table "filters", force: :cascade do |t|
+    t.integer "size"
+    t.string "game"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "recommendations", force: :cascade do |t|
